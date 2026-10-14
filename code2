@@ -1,0 +1,14 @@
+from datetime import date
+name = input("What is your name? ")
+birth_year = int(input("What year were you born? "))
+birth_month = int(input("What month were you born? "))
+birth_day = int(input("What day were you born? "))
+
+today = date.today()
+age = today.year - birth_year
+
+if (today.month, today.day) < (birth_month, birth_day):
+    age = age - 1
+
+print("Name:", name)
+print("Age:", age)
